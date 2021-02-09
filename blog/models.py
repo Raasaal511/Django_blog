@@ -4,6 +4,7 @@ from django.utils import timezone
 
 
 class Post(models.Model):
+	"""Создает пост с пользователем из settings"""
 	author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
 	title = models.CharField(max_length=100)
 	text = models.TextField()
