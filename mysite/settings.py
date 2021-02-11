@@ -45,7 +45,7 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -90,6 +90,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
+DIRS = ['TEMPLATE_DIR']
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
